@@ -1,0 +1,270 @@
+// Load CSS Reset from NPM
+@import "~normalize.css";
+@import "~bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+.hoverEffect:hover {
+  transition: 1s;
+  background-color: black;
+
+  .navbar {
+    transition: 1s;
+    background-color: #594431 !important;
+    color: white;
+
+    a {
+      color: white !important;
+    }
+
+    :hover {
+      color: white;
+    }
+
+    .dropdown-item {
+      color: black !important;
+    }
+  }
+
+  .upperNav {
+    .col-8 {
+      color: white;
+
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.navbar {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  background-color: white !important;
+
+  img {
+    max-width: 100px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 10px auto;
+  }
+
+  a {
+    color: black !important;
+  }
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.upperNav {
+  background-color: #c69453;
+  color: white;
+
+  a {
+    color: white;
+  }
+
+  .fa-facebook-square {
+    color: #3b5998;
+  }
+
+  .fa-instagram {
+    color: #c13584;
+  }
+}
+
+.carousel-inner {
+  img {
+    max-height: 65vh;
+  }
+}
+
+.carousel-thumbnails .carousel-indicators img {
+  max-width: 100px;
+  height: 75px;
+  overflow: hidden;
+  display: block;
+}
+
+.carousel-thumbnails .carousel-indicators li {
+  height: auto;
+  max-width: 100px;
+  width: 100px;
+  border: none;
+  box-shadow: 1px 3px 5px  rgba(0, 0, 0, 0.75);
+
+  &.active {
+    border-bottom: 4px solid #fff;
+  }
+}
+
+.carousel-caption {
+  top: 50%;
+  transform: translateY(-80%);
+  color: black;
+}
+
+.cool-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s;
+}
+
+.cool-link:hover::after {
+  width: 100%;
+
+  //transition: width .3s;
+}
+
+.cool-linkMenu::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.7s;
+}
+
+.cool-linkMenu:hover::after {
+  width: 100%;
+
+  //transition: width .7s;
+}
+
+.mainPageInfo {
+  background: linear-gradient(rgba(198, 148, 83, 0.9) 100%, rgba(198, 148, 83, 0.9) 100%), url("../images/parallax3.jpg");
+  background-position: bottom;
+
+  .fas {
+    color: #594431;
+  }
+
+  .fas::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 4px;
+    margin-top: 3px;
+    background: #594431;
+    transition: width 0.7s;
+  }
+
+  .activeEffect:hover {
+    .fas::after {
+      width: 90%;
+    }
+
+    .fas {
+      color: burlywood;
+    }
+  }
+
+  h3 {
+    color: #000;
+  }
+
+  p {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+  }
+}
+
+.navbar-nav li:hover .dropdown-menu {
+  display: block;
+}
+
+.navbar-dark .navbar-nav .show > .nav-link {
+  color: black;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus {
+  color: black;
+}
+
+.uredjenjePoMeri {
+  h4 {
+    color: #594431;
+  }
+}
+
+.divider {
+  /* minor cosmetics */
+  display: table;
+  font-size: 24px;
+  text-align: center;
+  width: 45%;
+
+  /* divider width */
+  margin: 30px auto;
+
+  /* spacing above/below */
+}
+
+.divider span {
+  display: table-cell;
+  position: relative;
+}
+
+.divider span:first-child,
+.divider span:last-child {
+  width: 45%;
+  top: 17px;
+
+  /* adjust vertical align */
+  -moz-background-size: 100% 2px;
+
+  /* line width */
+  background-size: 100% 2px;
+
+  /* line width */
+  background-position: 0 0, 0 100%;
+  background-repeat: no-repeat;
+}
+
+.divider span:first-child {
+  /* color changes in here */
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), to(#594431));
+  background-image: -webkit-linear-gradient(180deg, transparent, #594431);
+  background-image: -moz-linear-gradient(180deg, transparent, #594431);
+  background-image: -o-linear-gradient(180deg, transparent, #594431);
+  background-image: linear-gradient(90deg, #fff3e9, #967254);
+}
+
+.divider span:last-child {
+  /* color changes in here */
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#594431), to(transparent));
+  background-image: -webkit-linear-gradient(180deg, #594431, transparent);
+  background-image: -moz-linear-gradient(180deg, #594431, transparent);
+  background-image: -o-linear-gradient(180deg, #594431, transparent);
+  background-image: linear-gradient(90deg, #967254, #fff3e9);
+}
+
+.current {
+  border-radius: 500px;
+  background-color: #c69453;
+  outline: none;
+}
+
+.btn:focus {
+  box-shadow: none;
+}
+
+.filter {
+  img {
+    margin-top: 10px;
+    transition: 0.5s;
+  }
+
+  img:hover {
+    transform: scale(1.1);
+  }
+}
+
+@import "media-queries.scss";

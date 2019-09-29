@@ -1,0 +1,103 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins/_breakpoints";
+
+@include media-breakpoint-only(md) {
+  .divider span:first-child,
+  .divider span:last-child {
+    width: 38%;
+    top: 17px;
+
+    /* adjust vertical align */
+    -moz-background-size: 100% 2px;
+
+    /* line width */
+    background-size: 100% 2px;
+
+    /* line width */
+    background-position: 0 0, 0 100%;
+    background-repeat: no-repeat;
+  }
+
+  @include media-breakpoint-down(sm) {
+    .mainPageInfo {
+      .fas {
+        color: black;
+      }
+
+      h3 {
+        color: white;
+        font-size: 20px;
+      }
+
+      p {
+        color: blanchedalmond;
+        font-size: 0.9rem;
+      }
+    }
+
+    .divider span:first-child,
+    .divider span:last-child {
+      width: 32%;
+      top: 17px;
+
+      /* adjust vertical align */
+      -moz-background-size: 100% 2px;
+
+      /* line width */
+      background-size: 100% 2px;
+
+      /* line width */
+      background-position: 0 0, 0 100%;
+      background-repeat: no-repeat;
+    }
+  }
+
+  @include media-breakpoint-only(lg) {
+    .uredjenjePoMeri {
+      h4 {
+        color: red;
+      }
+    }
+
+    .divider span:first-child,
+    .divider span:last-child {
+      width: 42%;
+      top: 17px;
+
+      /* adjust vertical align */
+      -moz-background-size: 100% 2px;
+
+      /* line width */
+      background-size: 100% 2px;
+
+      /* line width */
+      background-position: 0 0, 0 100%;
+      background-repeat: no-repeat;
+    }
+  }
+
+  @include media-breakpoint-only(xl) {
+    .uredjenjePoMeri {
+      p {
+        max-width: 600px;
+      }
+    }
+
+    .divider span:first-child,
+    .divider span:last-child {
+      width: 43%;
+      top: 17px;
+
+      /* adjust vertical align */
+      -moz-background-size: 100% 2px;
+
+      /* line width */
+      background-size: 100% 2px;
+
+      /* line width */
+      background-position: 0 0, 0 100%;
+      background-repeat: no-repeat;
+    }
+  }
+}
