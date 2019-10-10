@@ -108,9 +108,9 @@ $(document).ready(() => {
   });
   mapboxgl.accessToken = 'pk.eyJ1IjoibmVuYWRkanVyaWNpYyIsImEiOiJjam4zODNiYzAwYTdtM3BvMmJ4MWtudGZ3In0.J8uoD1a0g6PpmB6WAH8mqA';
   const map = new mapboxgl.Map({
-    container: 'map', // container id
-    style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
-    center: [-74.50, 40], // starting position [lng, lat]
-    zoom: 9, // starting zoom
+    container: 'map', 
+    style: 'mapbox://styles/mapbox/streets-v11',
+    center: [-74.50, 40], 
+    zoom: 9
   });
 });
