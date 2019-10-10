@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/1.17.2/simplelightbox.css" 
   integrity="sha256-IysSYj8/EVAd2FEk91WKy3FgiVU+qLtjIFrxfKhb00A=" crossorigin="anonymous" />
+  <link href='https://api.mapbox.com/mapbox-gl-js/v1.3.2/mapbox-gl.css' rel='stylesheet' />
 </head>
 <div class="hoverEffect">
   <div class="container-fluid upperNav ">
@@ -38,7 +39,7 @@
     </div>
   </div>
 
-  <nav class="navbar navbar-expand-md  navbar-dark  pt-0 ">
+  <nav class="navbar navbar-expand-lg  navbar-dark pt-0">
     <div class="container">
       <button class="navbar-toggler mt-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,11 +48,11 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav align-items-center w-100 justify-content-around">
-          <li class="nav-item ">
-            <a class="nav-link cool-linkMenu" href="#">Pocetna <span class="sr-only">(current)</span></a>
+          <li class="nav-item">
+            <a class="nav-link cool-linkMenu" href="index.html">Pocetna <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link cool-linkMenu" href="#">O nama</a>
+            <a class="nav-link cool-linkMenu" href="index.html#oNama">O nama</a>
           </li>
           <li class="nav-item dropdown cool-linkMenu">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -72,10 +73,10 @@
         <img src="../src/images/Group 207.png" class="d-none d-sm-none d-md-block d-lg-block" alt="" />
         <ul class="navbar-nav align-items-center w-100 justify-content-around">
           <li class="nav-item">
-            <a class="nav-link cool-linkMenu" href="#">Nasi radovi</a>
+            <a class="nav-link cool-linkMenu" data-scroll href="index.html#nasiRadovi">Nasi radovi</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link cool-linkMenu" href="#">Ideje</a>
+            <a class="nav-link cool-linkMenu ideje" href="ideje.html">Ideje</a>
           </li>
           <li class="nav-item">
             <a class="nav-link cool-linkMenu" href="#">Kontakt</a>
@@ -85,6 +86,7 @@
   </nav>
 </div>
 </div>
+<section id="idejeAjax"></section>
 <div class="container-fluid slider w-100">
   <div class="row">
     <div id="carouselMain" class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel"
@@ -95,7 +97,7 @@
           <div class="carousel-caption d-none d-md-block">
             <h5 class="">Izrada namestaja po meri</h5>
             <p class="lead animated">Moderan dizajn i visoki kvalitet</p>
-            <button type="button" class="btn btn-outline-danger btn-md mt-4">Zakazite besplatno merenje</button>
+            <button type="button" class="btn btn-carpentStyle btn-md mt-4">Zakazite besplatno merenje</button>
           </div>
         </div>
         <div class="carousel-item">
@@ -103,7 +105,7 @@
           <div class="carousel-caption d-none d-md-block">
             <h5>First slide label</h5>
             <p class="lead">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            <button type="button" class="btn btn-outline-danger btn-md mt-4">Zakazite besplatno merenje</button>
+            <button type="button" class="btn btn-carpentStyle btn-md mt-4">Zakazite besplatno merenje</button>
           </div>
         </div>
         <div class="carousel-item">
@@ -111,7 +113,7 @@
           <div class="carousel-caption d-none d-md-block ">
             <h5>First slide label</h5>
             <p class="lead">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            <button type="button" class="btn btn-outline-danger btn-md mt-4">Zakazite besplatno merenje</button>
+            <button type="button" class="btn btn-carpentStyle btn-md mt-4">Zakazite besplatno merenje</button>
           </div>
         </div>
 
@@ -193,20 +195,12 @@
         class="img-fluid" style="max-height: 400px; ">
     </div>
     <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5  mt-2 order-1 order-lg-2">
-      <h4 class="text-center text-lg-left text-xl-right mt-4">Nameštaj po meri - Saveti i Ideje</h4>
-      <p class="text-justify text-xl-right ml-auto">U svakoj oblasti je potrebno iskustvo kako bi bili bolji i
-        na taj način
-        preneli znanje
-        nna druge.
-        Već 30 godina izrađujemo nameštaj po meri od različitih materijala i dezena. Naše dugogodišnje iskustvo u ovoj
-        oblasti nam
-        omogućava da Vam damo nnajbolja rešenje i ideje za Vaš dom na takav način da dobijete nameštaj kakav Vaš stan,
-        kuća, kancelarija zaslužuje.
-        <br>Nekada je teško znati na koji način početi sa odabirom boja, materijala, okova za nameštaj koji
-        izrađujete. U današnje vreme je više nego
-        ikad dostupan veliki broj dezena i tekstura za koje se treba opredeliti. Zato smo tu da vam olakšamo ceo
-        proces sa donošenjem uzorka dekora na
-        vašu adresu uz uzimanje mera.</p>
+      <h4 class="text-center text-lg-left text-xl-right mt-4">O nama</h4>
+      <p class="text-justify text-xl-right ml-auto">NS Style ima preko 10 godina iskustva u izradi svih vrsta nameštaja i 
+        elemenata za vaše kuće, stanove, kancelarije i poslovne prostore.
+        <br>Svoj put smo započeli 2010. godine, od tada nameštaj po meri smo izradili za veliki broj 
+        zadovoljnih kupaca.Naš proizvodni program obuhvata izradu sledećeg nameštaja:<strong> klizni-americki plakari, kuhinje, kupatila, decije sobe,spavace sobe,
+      dnevne sobe, predsoblje, kancelarije i poslovne prostorije</strong></p>
     </div>
 
   </div>
@@ -239,7 +233,7 @@
 
   </div>
 </div>
-<div class="container">
+<div class="container" id="nasiRadovi">
   <div class="row justify-content-center">
 
     <div class="border border-dark rounded-pill">
@@ -255,7 +249,7 @@
 <div class="container-fluid mt-5">
   <div class="row">
     <div class="kuhinje filter col-2">
-      <a href="/images/bed-1839184_1920.jpg" class="img-fluid" data-group="kuhinje">
+      <a href="/images/seminar-594118_1920.jpg" class="img-fluid" data-group="kuhinje">
         <img src="../src/images/seminar-594118_1920.jpg" class="img-fluid" style="max-height: 180px">
       </a>
     </div>
@@ -334,16 +328,14 @@
   </svg>
 
 </div>
-<div class="container-fluid mt-5">
-  <div class="row">
-    <div class="col-6">red</div>
-    <div class="col-6">red</div>
-  </div>
+<div class="container-fluid ">
+    <div id="map"> 
+     
+   </div>
 </div>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
   AOS.init();
-
 </script>
 
 <body>

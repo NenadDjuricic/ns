@@ -267,4 +267,14 @@ body {
   }
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 222;
+}
+#map{ 
+  width:100%; 
+  position: absolute;
+}
 @import "media-queries.scss";

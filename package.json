@@ -85,11 +85,13 @@
     "figlet": "^1.2.3",
     "ftp-deploy": "^2.3.3",
     "jquery": "^3.4.1",
+    "mapbox-gl": "^1.4.0",
     "normalize.css": "^8.0.1",
     "popper.js": "^1.15.0",
     "reset-css": "^4.0.1",
     "sanitize.css": "^11.0.0",
     "simplelightbox": "^1.17.2",
+    "smooth-scroll": "^16.1.0",
     "webpack-dev-server": "^3.8.0"
   }
 }

@@ -4,8 +4,11 @@ import $ from 'jquery';
 import '../stylesheets/styles.scss';
 import 'bootstrap';
 import 'simplelightbox';
+import SmoothScroll from 'smooth-scroll';
 
+const mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
 /* eslint no-underscore-dangle: 0 */
+/* eslint-disable no-unused-vars */
 window.jQuery = $;
 window.$ = $;
 
@@ -38,6 +41,9 @@ $(document).ready(() => {
 
   if ($('.filter a').length > 0) {
     const $images = $('.filter a');
+    const $imagesIdeje = $('.gallery a');
+    const $imagesIdejeGrouped = $imagesIdeje.filter('[data-group]');
+    const $imagesIdejeAlone = $imagesIdeje.not($imagesIdejeGrouped);
     const $imagesGrouped = $images.filter('[data-group]');
     const $imagesAlone = $images.not($imagesGrouped);
     const params = {
@@ -47,7 +53,9 @@ $(document).ready(() => {
     $imagesAlone.each((index, element) => {
       $(element).simpleLightbox(params);
     });
-
+    $imagesIdejeAlone.each((index, element) => {
+      $(element).simpleLightbox(params);
+    });
     // Handle grouped imags
     if ($imagesGrouped.length > 0) {
       // Select all groups
@@ -78,5 +86,31 @@ $(document).ready(() => {
       $(this).removeClass('current');
     }
     $(this).addClass('current');
+  });
+  const scroll = new SmoothScroll('[data-scroll]');
+  const navFromTop = $('.navbar').offset().top;
+  window.onscroll = function () {
+    if (window.pageYOffset > navFromTop) {
+      $('.navbar').addClass('sticky');
+      $('.slider').css('margin-top', '120px');
+      $('#idejeAjax').css('margin-top', '120px');
+    } else {
+      $('.navbar').removeClass('sticky');
+      $('.slider').css('margin-top', '0px');
+      $('#idejeAjax').css('margin-top', '0px');
+    }
+  };
+  $('.ideje').on('click', function (e) {
+    e.preventDefault();
+    const url = this.href;
+    $('.slider').remove();
+    $('#idejeAjax').load(url).hide().fadeIn('slow');
+  });
+  mapboxgl.accessToken = 'pk.eyJ1IjoibmVuYWRkanVyaWNpYyIsImEiOiJjam4zODNiYzAwYTdtM3BvMmJ4MWtudGZ3In0.J8uoD1a0g6PpmB6WAH8mqA';
+  const map = new mapboxgl.Map({
+    container: 'map', // container id
+    style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+    center: [-74.50, 40], // starting position [lng, lat]
+    zoom: 9, // starting zoom
   });
 });
