@@ -15,7 +15,7 @@ const config = {
   site_description: 'Stolarija i kuhinje na metar, namestaj za celu kucu, opremanje ',
 
   // Your website's URL, used for sitemap
-  site_url: '',
+  site_url: 'www.nsstyle.rs',
 
   // Google Analytics tracking ID (leave blank to disable)
   googleAnalyticsUA: 'UA-150370251-1',
