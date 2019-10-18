@@ -9,16 +9,16 @@ if (!ROOT) {
 
 const config = {
   // Your website's name, used for favicon meta tags
-  site_name: 'nsStyle',
+  site_name: 'NS Style',
 
   // Your website's description, used for favicon meta tags
-  site_description: 'A modern boilerplate for static website development',
+  site_description: 'Stolarija i kuhinje na metar, namestaj za celu kucu, opremanje ',
 
   // Your website's URL, used for sitemap
   site_url: '',
 
   // Google Analytics tracking ID (leave blank to disable)
-  googleAnalyticsUA: '',
+  googleAnalyticsUA: 'UA-150370251-1',
 
   // The viewport meta tag added to your HTML page's <head> tag
   viewport: 'width=device-width,initial-scale=1',
