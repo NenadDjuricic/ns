@@ -32,4 +32,5 @@ module.exports = {
     rules: loaders,
   },
   plugins,
+  performance: { hints: false }
 };
