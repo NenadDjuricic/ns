@@ -108,9 +108,63 @@ $(document).ready(() => {
   });
   mapboxgl.accessToken = 'pk.eyJ1IjoibmVuYWRkanVyaWNpYyIsImEiOiJjam4zODNiYzAwYTdtM3BvMmJ4MWtudGZ3In0.J8uoD1a0g6PpmB6WAH8mqA';
   const map = new mapboxgl.Map({
-    container: 'map', 
+    container: 'map',
     style: 'mapbox://styles/mapbox/streets-v11',
-    center: [-74.50, 40], 
-    zoom: 9
+    center: [20.525984, 44.782180],
+    zoom: 15,
+  });
+  map.on('load', () => {
+    map.loadImage('https://img.icons8.com/plasticine/45/000000/marker.png', (error, image) => {
+      if (error) throw error;
+      map.addImage('mark', image);
+      // Add a layer showing the places.
+      map.addLayer({
+        id: 'places',
+        type: 'symbol',
+        source: {
+          type: 'geojson',
+          data: {
+            type: 'FeatureCollection',
+            features: [
+              {
+                type: 'Feature',
+                properties: {
+                  description:
+                  '<strong>NS STYLE</strong><p>RADNO VREME<br>Ponedeljak-Subota: 7:00-19:00 <br> Nedelja: 9:00-14:00</p>',
+                },
+                geometry: {
+                  type: 'Point',
+                  coordinates: [20.525984, 44.782180],
+                },
+              },
+            ],
+          },
+        },
+        layout: {
+          'icon-image': 'mark',
+          'icon-allow-overlap': true,
+          'icon-size': 1,
+          'icon-padding': 10,
+        },
+
+
+      });
+    });
+  });
+  map.on('click', 'places', (e) => {
+    const coordinates = e.features[0].geometry.coordinates.slice();
+    const { description } = e.features[0].properties;
+
+    // Ensure that if the map is zoomed out such that multiple
+    // copies of the feature are visible, the popup appears
+    // over the copy being pointed to.
+    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+      coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+    }
+
+    new mapboxgl.Popup()
+      .setLngLat(coordinates)
+      .setHTML(description)
+      .addTo(map);
   });
 });
