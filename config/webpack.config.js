@@ -32,5 +32,10 @@ module.exports = {
     rules: loaders,
   },
   plugins,
-  performance: { hints: false }
+  performance: { hints: false },
+  resolve: {
+    alias: {
+        jquery: "jquery/src/jquery"
+    }
+}
 };
