@@ -399,5 +399,8 @@ footer {
   background-color: darken(#c69453, 10%);
   height: 45px;
 }
-
+.btn-carpentStyle {
+  color: #212529;
+  background-color: #c69453;
+  border-color: #c69453;
 @import "media-queries.scss";
