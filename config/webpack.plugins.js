@@ -129,6 +129,10 @@ const google = new GoogleAnalyticsPlugin({
   id: config.googleAnalyticsUA,
 });
 
+new webpack.ProvidePlugin({
+  $: "jquery",
+  jQuery: "jquery"
+ })
 module.exports = [
   clean,
   stylelint,
