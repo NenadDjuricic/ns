@@ -103,14 +103,79 @@ $(document).ready(() => {
   $('.ideje').on('click', (e) => {
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    $('.slider').css('display', 'none');
     $('#idejeAjax').show(1000);
+    $('.slider').css('display', 'none');
+    $('#kuhinjeAjax').css('display', 'none');
+    $('#kupatilaAjax').css('display', 'none');
+    $('#plakariAjax').css('display', 'none');
+    $('#spavaceAjax').css('display', 'none');
+    $('#kancelarijeAjax').css('display', 'none');
+  });
+  $('.dropdown-item.kuhinje').on('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    $('#kuhinjeAjax').show(1000);
+    $('.slider').css('display', 'none');
+    $('#idejeAjax').css('display', 'none');
+    $('#kupatilaAjax').css('display', 'none');
+    $('#plakariAjax').css('display', 'none');
+    $('#spavaceAjax').css('display', 'none');
+    $('#kancelarijeAjax').css('display', 'none');
+  });
+  $('.dropdown-item.plakari').on('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    $('#plakariAjax').show(1000);
+    $('.slider').css('display', 'none');
+    $('#idejeAjax').css('display', 'none');
+    $('#kupatilaAjax').css('display', 'none');
+    $('#kuhinjeAjax').css('display', 'none');
+    $('#spavaceAjax').css('display', 'none');
+    $('#kancelarijeAjax').css('display', 'none');
+  });
+  $('.dropdown-item.kupatila').on('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    $('#kupatilaAjax').show(1000);
+    $('.slider').css('display', 'none');
+    $('#idejeAjax').css('display', 'none');
+    $('#plakariAjax').css('display', 'none');
+    $('#kuhinjeAjax').css('display', 'none');
+    $('#spavaceAjax').css('display', 'none');
+    $('#kancelarijeAjax').css('display', 'none');
+  });
+  $('.dropdown-item.spavace').on('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    $('#spavaceAjax').show(1000);
+    $('.slider').css('display', 'none');
+    $('#idejeAjax').css('display', 'none');
+    $('#plakariAjax').css('display', 'none');
+    $('#kuhinjeAjax').css('display', 'none');
+    $('#kancelarijeAjax').css('display', 'none');
+    $('#kupatilaAjax').css('display', 'none');
+  });
+  $('.dropdown-item.kancelarije').on('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    $('#kancelarijeAjax').show(1000);
+    $('.slider').css('display', 'none');
+    $('#idejeAjax').css('display', 'none');
+    $('#plakariAjax').css('display', 'none');
+    $('#kuhinjeAjax').css('display', 'none');
+    $('#kupatilaAjax').css('display', 'none');
+    $('#spavaceAjax').css('display', 'none');
   });
   $('.home').on('click', (e) => {
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: 'smooth' });
     $('.slider').show(1000);
     $('#idejeAjax').css('display', 'none');
+    $('#kuhinjeAjax').css('display', 'none');
+    $('#kupatilaAjax').css('display', 'none');
+    $('#plakariAjax').css('display', 'none');
+    $('#spavaceAjax').css('display', 'none');
+    $('#kancelarijeAjax').css('display', 'none');
   });
   mapboxgl.accessToken = 'pk.eyJ1IjoibmVuYWRkanVyaWNpYyIsImEiOiJjam4zODNiYzAwYTdtM3BvMmJ4MWtudGZ3In0.J8uoD1a0g6PpmB6WAH8mqA';
   const map = new mapboxgl.Map({
