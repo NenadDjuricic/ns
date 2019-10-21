@@ -4,6 +4,7 @@ import $ from 'jquery';
 import '../stylesheets/styles.scss';
 import 'bootstrap';
 import 'simplelightbox';
+import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
 import SmoothScroll from 'smooth-scroll';
 
