@@ -256,10 +256,12 @@ $(document).ready(() => {
   const handleToggleBannerSlider1 = (function () {
     const banner = $('.toggle-banner.toggle-slider-wrapper .item');
     const button = $('.toggle-button');
+    const buttonIcon = $('.toggle-button i');
     button.click(() => {
       banner.toggleClass('closed');
       button.toggleClass('expand');
-      console.log('klik');
+      buttonIcon.toggleClass('fa-arrow-right');
+      buttonIcon.toggleClass('fa-arrow-left');
     });
   }());
 });
