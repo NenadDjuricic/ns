@@ -4,6 +4,8 @@
 @import '~owl.carousel/src/scss/owl.carousel.scss';
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 
+$owl-image-path: "~owl.carousel/src/img/";
+
 .hoverEffect:hover {
   transition: 1s;
   background-color: black;
