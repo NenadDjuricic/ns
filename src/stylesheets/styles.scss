@@ -1,9 +1,8 @@
 // Load CSS Reset from NPM
 @import "~normalize.css";
 @import "~bootstrap/scss/bootstrap";
-@import '~owl.carousel/src/scss/owl.carousel.scss';
+@import "~owl.carousel/src/scss/owl.carousel.scss";
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
-@import url("https://github.com/NenadDjuricic/ns/blob/e35e84185ee499a389de9b79022cf6c8aa141953/src/images/owl.video.play.png");
 
 .hoverEffect:hover {
   transition: 1s;
