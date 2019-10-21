@@ -4,6 +4,7 @@ import $ from 'jquery';
 import '../stylesheets/styles.scss';
 import 'bootstrap';
 import 'simplelightbox';
+import 'owl.carousel';
 import SmoothScroll from 'smooth-scroll';
 
 const mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
@@ -238,4 +239,27 @@ $(document).ready(() => {
       .setHTML(description)
       .addTo(map);
   });
+  $('.owl-carousel').owlCarousel({
+    items: 1,
+    loop: true,
+    margin: 10,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    smartSpeed: 600,
+  });
+
+  /*
+     * Toggle banner slider
+     */
+
+  const handleToggleBannerSlider1 = (function () {
+    const banner = $('.toggle-banner.toggle-slider-wrapper .item');
+    const button = $('.toggle-button');
+    button.click(() => {
+      banner.toggleClass('closed');
+      button.toggleClass('expand');
+      console.log('klik');
+    });
+  }());
 });
