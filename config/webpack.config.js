@@ -37,5 +37,5 @@ module.exports = {
     alias: {
         jquery: "jquery/src/jquery"
     }
-}
+  }
 };
