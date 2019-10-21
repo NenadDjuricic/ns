@@ -100,11 +100,17 @@ $(document).ready(() => {
       $('#idejeAjax').css('margin-top', '0px');
     }
   };
-  $('.ideje').on('click', function (e) {
+  $('.ideje').on('click', (e) => {
     e.preventDefault();
-    const url = this.href;
-    $('.slider').remove();
-    $('#idejeAjax').load(url).hide().fadeIn('slow');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    $('.slider').css('display', 'none');
+    $('#idejeAjax').show(1000);
+  });
+  $('.home').on('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    $('.slider').show(1000);
+    $('#idejeAjax').css('display', 'none');
   });
   mapboxgl.accessToken = 'pk.eyJ1IjoibmVuYWRkanVyaWNpYyIsImEiOiJjam4zODNiYzAwYTdtM3BvMmJ4MWtudGZ3In0.J8uoD1a0g6PpmB6WAH8mqA';
   const map = new mapboxgl.Map({

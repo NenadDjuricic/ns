@@ -2,6 +2,35 @@
 @import "node_modules/bootstrap/scss/variables";
 @import "node_modules/bootstrap/scss/mixins/_breakpoints";
 
+@include media-breakpoint-only(xs) {
+  .ourWork .border {
+    border: none !important;
+  }
+
+  #Kontakt {
+    .col-sm-4 {
+      display: flex;
+      justify-content: center;
+    }
+
+    .footer-widget {
+      text-align: center;
+    }
+
+    .footer-social {
+      display: inline-block;
+    }
+
+    .media-body {
+      margin: 0 !important;
+    }
+
+    .media-object {
+      float: right;
+    }
+  }
+}
+
 @include media-breakpoint-only(md) {
   .divider span:first-child,
   .divider span:last-child {

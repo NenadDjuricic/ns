@@ -66,6 +66,10 @@ body {
     color: white;
   }
 
+  a:hover {
+    text-decoration: none !important;
+  }
+
   .fa-facebook-square {
     color: #3b5998;
   }
@@ -367,24 +371,11 @@ footer {
   }
 
   // opening hour
-  .opening-time {
+  .open-time {
     padding-left: 0;
 
-    li {
-      list-style: none;
-
-      span {
-        float: left;
-        padding-right: 10px;
-
-        .fa-times {
-          color: red;
-        }
-      }
-
-      strong {
-        color: red;
-      }
+    .hour{
+      color: red;
     }
   }
 
@@ -405,5 +396,7 @@ footer {
   background-color: #c69453;
   border-color: #c69453;
 }
-
+#idejeAjax{
+  display: none;
+}
 @import "media-queries.scss";
