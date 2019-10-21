@@ -374,7 +374,7 @@ footer {
   .open-time {
     padding-left: 0;
 
-    .hour{
+    .hour {
       color: red;
     }
   }
@@ -396,7 +396,9 @@ footer {
   background-color: #c69453;
   border-color: #c69453;
 }
-#idejeAjax{
+
+#idejeAjax {
   display: none;
 }
+
 @import "media-queries.scss";
